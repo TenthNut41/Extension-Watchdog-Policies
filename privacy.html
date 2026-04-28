@@ -1,0 +1,207 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Privacy Policy for Extension Watchdog</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      body {
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+        line-height: 1.55;
+        max-width: 860px;
+        margin: 0 auto;
+        padding: 32px 18px;
+        color: #111827;
+        background: #ffffff;
+      }
+      h1, h2 {
+        line-height: 1.25;
+      }
+      h1 {
+        font-size: 30px;
+        margin-bottom: 8px;
+      }
+      h2 {
+        margin-top: 28px;
+        font-size: 20px;
+      }
+      ul {
+        padding-left: 24px;
+      }
+      .muted {
+        color: #4b5563;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Privacy Policy for Extension Watchdog</h1>
+
+    <p class="muted">Effective date: 28 April 2026</p>
+
+    <p>
+      Extension Watchdog is a Chrome extension that monitors Chrome extensions selected by the user and alerts the user if a watched extension becomes disabled, enabled again, or unavailable.
+    </p>
+
+    <p>
+      This privacy policy explains what information the extension handles, how it is used, and when it may be transmitted.
+    </p>
+
+    <h2>Information the extension stores locally</h2>
+
+    <p>Extension Watchdog stores the following information locally in the user's Chrome browser profile:</p>
+
+    <ul>
+      <li>Watched extension IDs</li>
+      <li>Watched extension names</li>
+      <li>Last known watched extension statuses</li>
+      <li>Last checked timestamps</li>
+      <li>Local notification preference</li>
+      <li>Optional remote webhook setting</li>
+      <li>Optional webhook URL, if the user enables remote webhook alerts</li>
+      <li>Password credential metadata, including a PBKDF2-SHA-256 password hash, salt, iteration count, and creation timestamp</li>
+    </ul>
+
+    <p>The extension does not store the plaintext password.</p>
+
+    <h2>How the information is used</h2>
+
+    <p>The stored information is used only to provide the extension's core functionality:</p>
+
+    <ul>
+      <li>To remember which Chrome extensions the user has chosen to monitor</li>
+      <li>To check whether watched extensions are enabled, disabled, or unavailable</li>
+      <li>To show local Chrome notifications when a watched extension changes status</li>
+      <li>To send an optional remote webhook alert when a watched extension becomes disabled</li>
+      <li>To protect the extension settings screen with a user-created local UI password</li>
+    </ul>
+
+    <p>
+      The local UI password protects only the extension settings screen in the current Chrome profile. It is not a replacement for operating-system account security.
+    </p>
+
+    <h2>Remote webhook alerts</h2>
+
+    <p>Remote webhook alerts are off by default.</p>
+
+    <p>
+      If the user enables remote webhook alerts and saves a supported webhook URL, the extension may send an alert to that webhook when a watched extension becomes disabled.
+    </p>
+
+    <p>Supported webhook destinations are:</p>
+
+    <ul>
+      <li>Slack incoming webhooks</li>
+      <li>Discord webhooks</li>
+      <li>n8n Cloud webhooks</li>
+    </ul>
+
+    <p>
+      Remote webhook alerts are intentionally sent only when a watched extension becomes disabled. Local Chrome notifications may still report enabled-again or unavailable status changes.
+    </p>
+
+    <p>A disabled-extension webhook alert may include:</p>
+
+    <ul>
+      <li>Watched extension name</li>
+      <li>Watched extension ID</li>
+      <li>Status</li>
+      <li>Detection source</li>
+      <li>Detection time</li>
+      <li>Whether the alert is a webhook test</li>
+    </ul>
+
+    <p>Webhook data is sent only to the webhook URL configured by the user.</p>
+
+    <h2>Information the extension does not collect</h2>
+
+    <p>Extension Watchdog does not read, collect, store, or transmit:</p>
+
+    <ul>
+      <li>Browsing history</li>
+      <li>Website page contents</li>
+      <li>Cookies</li>
+      <li>Open tabs</li>
+      <li>Form data</li>
+      <li>Saved passwords</li>
+      <li>Search history</li>
+      <li>Website activity</li>
+      <li>Analytics or advertising identifiers</li>
+    </ul>
+
+    <h2>Third-party services</h2>
+
+    <p>
+      The extension does not use analytics, advertising, tracking scripts, or external services by default.
+    </p>
+
+    <p>
+      The extension only contacts a third-party service if the user explicitly enables remote webhook alerts and provides a supported Slack, Discord, or n8n Cloud webhook URL.
+    </p>
+
+    <h2>Data sharing</h2>
+
+    <p>
+      Extension Watchdog does not sell, rent, or share user data with advertisers, data brokers, or unrelated third parties.
+    </p>
+
+    <p>
+      Data is transmitted only when the user enables remote webhook alerts, and only to the user-configured webhook endpoint.
+    </p>
+
+    <h2>Data retention</h2>
+
+    <p>
+      Extension Watchdog stores settings locally in the user's Chrome browser profile until the user changes them, clears extension data, or uninstalls the extension.
+    </p>
+
+    <p>
+      The developer does not operate a separate server for storing Extension Watchdog data.
+    </p>
+
+    <h2>Security</h2>
+
+    <p>
+      The extension stores data locally using Chrome extension storage.
+    </p>
+
+    <p>
+      Remote webhook alerts, when enabled, require HTTPS webhook URLs. The extension does not support non-HTTPS webhook URLs.
+    </p>
+
+    <p>
+      The settings UI password is hashed using PBKDF2-SHA-256 with a random salt. The plaintext password is not stored.
+    </p>
+
+    <h2>Limited Use</h2>
+
+    <p>
+      The use of information received from Chrome extension APIs will adhere to the Chrome Web Store User Data Policy, including the Limited Use requirements.
+    </p>
+
+    <p>
+      Information accessed through Chrome extension APIs is used only to provide the extension's single purpose: monitoring user-selected installed Chrome extensions and sending user-configured alerts.
+    </p>
+
+    <p>
+      The extension does not sell, transfer, or use this information for advertising, profiling, credit-worthiness, or any unrelated purpose.
+    </p>
+
+    <h2>Changes to this policy</h2>
+
+    <p>
+      This privacy policy may be updated if the extension's functionality or data handling practices change.
+    </p>
+
+    <p>
+      The updated version will be posted at this same URL with a new effective date.
+    </p>
+
+    <h2>Contact</h2>
+
+    <p>
+      For questions about this privacy policy, contact:<br>
+      Extension Watchdog<br>
+      autostaged@gmail.com
+    </p>
+  </body>
+</html>
